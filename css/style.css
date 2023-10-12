@@ -1,0 +1,85 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
+
+.img-card-fit {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+}
+
+.img-cont {
+    height: 200px;
+    overflow: hidden;
+    background-color: beige;
+}
+
+.card-content{
+    height: 150px;
+    overflow: auto;
+}
+
+main {
+    min-height: calc(100vh - 100px);
+  }
+
+.checked{
+    color: orange;
+}
+
+.offcanvas-top{
+    height: fit-content;
+}
+body{
+    color: white;
+}
+.color1{
+    background-color: rgba(204, 96, 103, 0.692);
+    color: white;
+}
+.estrellitas{
+    color: #F09100;
+    text-align: center;
+  }
+  .estrellita2{
+    color: #F09100;
+    background-color: #F09100;
+  }
+  .estrellita3{
+    color: #F09100;
+    background-color: #F09100;
+  }
+  .estrellita4{
+    color: #F09100;
+    background-color: #F09100;
+  }
+  .estrellita5{
+    color: #F09100;
+    background-color: #F09100;
+  }
+  
+  .imgCompleta{
+    color: #F09100;
+  }
+  .imgNoCompleta{
+    color: #F09100;
+  }
+  
+  .claseEstrella{
+    background-color: #F09100;
+    color: #F09100;
+  }
+  .claseEstrellaWhite{
+    background-color: white;
+  }
+  .contenedor1{
+    padding-top: 50px;
+    
+  }
+  
+  
+
+  
+  .estrellitas{
+    margin-bottom: 80px;
+    margin-top: 30px;
+  justify-content: center;
+  }
