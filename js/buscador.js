@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
                                                 
                                                 cosa.title.toLowerCase().startsWith(buscar.value) ||
                                                 cosa.tagline.toLowerCase().startsWith(buscar.value)||
-                                                cosa.genres.toLowerCase().some((genre) => genre.name.startsWith(buscar.value)) ||
+                                                cosa.genres.some((genre) => genre.name.startsWith(buscar.value)) ||
                                                 cosa.overview.toLowerCase().startsWith(buscar.value) ?
                                                 lista.innerHTML +=
                                                 `<li class="list-group-item text-center color1">${cosa.title} <br />${cosa.tagline}
