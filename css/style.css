@@ -133,3 +133,7 @@ body{
   .dropdown-item{
     text-align: center;
   }
+
+  .li{
+    padding: 20px;
+  }
