@@ -137,3 +137,7 @@ body{
   .li{
     padding: 20px;
   }
+
+  .list-group-item{
+    margin: 10px;
+  }
