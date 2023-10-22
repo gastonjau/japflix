@@ -58,13 +58,14 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
         function handleFunction (){
             lista.innerHTML = "";
+            let searchValue = buscar.value.toLowerCase(); 
             let peliculasFiltradas = data.filter(cosa => 
                                                 {
                                                 
-                                                cosa.title.toLowerCase().startsWith(buscar.value) ||
-                                                cosa.tagline.toLowerCase().startsWith(buscar.value)||
-                                                cosa.genres.some((genre) => genre.name.startsWith(buscar.value)) ||
-                                                cosa.overview.toLowerCase().startsWith(buscar.value) ?
+                                                cosa.title.toLowerCase().startsWith(searchValue) ||
+                                                cosa.tagline.toLowerCase().startsWith(searchValue)||
+                                                cosa.genres.some((genre) => genre.name.toLowerCase().startsWith(searchValue)) ||
+                                                cosa.overview.toLowerCase().startsWith(searchValue) ?
                                                 lista.innerHTML +=
                                                 `<li class="list-group-item text-center color1">${cosa.title} <br />${cosa.tagline}
                                                 </li>
