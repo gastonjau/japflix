@@ -121,10 +121,34 @@ document.addEventListener("DOMContentLoaded", ()=>{
                                                 cosa.overview.toLowerCase().startsWith(searchValue) ?
                                                 lista.innerHTML +=
                                                 `<li class="list-group-item text-center color1">${cosa.title} <br />${cosa.tagline}
-                                                  <div class="amarillo ">
+                                                  <div class="amarillo mb-3">
                                                   <p>Calificacion: </p>${calificacion(Math.round(cosa.vote_average))}
                                                   </div>
-                                                
+                                                  <button class="btn btn-warning" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Desplegar</button>
+
+
+                                                  <div class="offcanvas offcanvas-top docanvas" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+                                                  
+                                                    <div class="offcanvas-header">
+                                                      <h5 class="offcanvas-title" id="offcanvasTopLabel">Pelicula: ${cosa.title}</h5><br />
+                                                      
+                                                      
+                                                      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="offcanvas-body">
+                                                    <h6>Reseña: ${cosa.overview}</h6>
+                                                    <hr />
+                                                    <h6>Generos: ${cosa.genres[0].name +" - "+ cosa.genres[1].name +" - "+ cosa.genres[2].name}</h6>
+                                                    
+
+                                                    </div>
+                                                  </div>
+                                                    
+
+
+
+
+
                                                 </li>
                                                 ` : "" } )
             console.log(peliculasFiltradas)
