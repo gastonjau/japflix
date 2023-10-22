@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
                 <i class="bi bi-star-fill"></i>
                 <i class="bi bi-star-fill"></i>
                 <i class="bi bi-star"></i>
-                < i class="bi bi-star"></>
+                < i class="bi bi-star"><i/>
                 <i class="bi bi-star"></i>
               `;
           } else if (score == "4") {
