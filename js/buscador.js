@@ -120,13 +120,17 @@ document.addEventListener("DOMContentLoaded", ()=>{
                                                 cosa.genres.some((genre) => genre.name.toLowerCase().startsWith(searchValue)) ||
                                                 cosa.overview.toLowerCase().startsWith(searchValue) ?
                                                 lista.innerHTML +=
-                                                `<li class="list-group-item text-center color1">${cosa.title} <br />${cosa.tagline}
+                                                `
+                                                
+                                                <div class="contenedorSeparo1">
+                                                <li class="list-group-item text-center color1">${cosa.title} <br />${cosa.tagline}
                                                   <div class="amarillo mb-3">
                                                   <p>Calificacion: </p>${calificacion(Math.round(cosa.vote_average))}
                                                   </div>
                                                   <button class="btn btn-warning" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Desplegar</button>
 
 
+                                                  <div class="separo">
                                                   <div class="offcanvas offcanvas-top docanvas" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
                                                   
                                                     <div class="offcanvas-header">
@@ -138,12 +142,28 @@ document.addEventListener("DOMContentLoaded", ()=>{
                                                     <div class="offcanvas-body">
                                                     <h6>Reseña: ${cosa.overview}</h6>
                                                     <hr />
+                                                    </div>
+                                                    <div class="divSep">
+
                                                     <h6>Generos: ${cosa.genres[0].name +" - "+ cosa.genres[1].name +" - "+ cosa.genres[2].name}</h6>
-                                                    
+                                                    <div class="dropdown">
+                                                      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        Dropdown button
+                                                      </button>
+                                                      <ul class="dropdown-menu">
+                                                        <li><a class="dropdown-item" href="#">Year: ${cosa.release_date.slice(0,4)} </a></li>
+                                                        <li><a class="dropdown-item" href="#">Runtime: ${cosa.runtime + "min"}</a></li>
+                                                        <li><a class="dropdown-item" href="#">Budget: ${"$" + cosa.budget}</a></li>
+                                                        <li><a class="dropdown-item" href="#">Revenue: ${"$" + cosa.revenue}</a></li>
+                                                        
+                                                      </ul>
+                                                    </div>
+                                                    </div>
+                                                  
 
                                                     </div>
                                                   </div>
-                                                    
+                                                  </div> 
 
 
 
@@ -151,7 +171,12 @@ document.addEventListener("DOMContentLoaded", ()=>{
 
                                                 </li>
                                                 ` : "" } )
+                                                
+                                                                        
+
             console.log(peliculasFiltradas)
         }})
+
+       
 
     })
